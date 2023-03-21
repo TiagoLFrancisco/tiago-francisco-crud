@@ -11,7 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ElementDialogComponent } from './shared/element-dialog/element-dialog.component';
+import { CustomerDialogComponent } from './shared/customer-dialog/customer-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ElementDialogComponent,
+    CustomerDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
-import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-dialog.component';
+import { CustomerDialogComponent } from 'src/app/shared/customer-dialog/customer-dialog.component';
 
 export interface Customer {
   firstName: string;
@@ -65,10 +65,10 @@ export class HomeComponent {
 
   constructor(public dialog: MatDialog) {}
 
-  openForm(element: Customer | null): void {
-    const dialogRef = this.dialog.open(ElementDialogComponent, {
+  openForm(customer: Customer | null): void {
+    const dialogRef = this.dialog.open(CustomerDialogComponent, {
       data:
-        element === null
+        customer === null
           ? {
               position: null,
               firstName: '',
@@ -79,13 +79,13 @@ export class HomeComponent {
               bankAccountNumber: null,
             }
           : {
-              position: element.position,
-              firstName: element.firstName,
-              lastName: element.lastName,
-              dateOfBirth: element.dateOfBirth,
-              phoneNumber: element.phoneNumber,
-              email: element.email,
-              bankAccountNumber: element.bankAccountNumber,
+              position: customer.position,
+              firstName: customer.firstName,
+              lastName: customer.lastName,
+              dateOfBirth: customer.dateOfBirth,
+              phoneNumber: customer.phoneNumber,
+              email: customer.email,
+              bankAccountNumber: customer.bankAccountNumber,
             },
     });
 
@@ -102,8 +102,8 @@ export class HomeComponent {
     });
   }
 
-  editCustomer(element: Customer): void {
-    this.openForm(element);
+  editCustomer(customer: Customer): void {
+    this.openForm(customer);
   }
 
   deleteCustomer(position: number): void {

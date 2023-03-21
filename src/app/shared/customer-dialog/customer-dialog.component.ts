@@ -3,18 +3,18 @@ import { Customer } from 'src/app/views/home/home.component';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-element-dialog',
-  templateUrl: './element-dialog.component.html',
-  styleUrls: ['./element-dialog.component.scss'],
+  selector: 'app-customer-dialog',
+  templateUrl: './customer-dialog.component.html',
+  styleUrls: ['./customer-dialog.component.scss'],
 })
-export class ElementDialogComponent {
-  element!: Customer;
+export class CustomerDialogComponent {
+  customer!: Customer;
   isChange!: boolean;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: Customer,
-    public dialogRef: MatDialogRef<ElementDialogComponent>
+    public dialogRef: MatDialogRef<CustomerDialogComponent>
   ) {}
 
   ngOnInit(): void {
