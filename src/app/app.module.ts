@@ -7,10 +7,11 @@ import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatTableModule],
   providers: [],
   bootstrap: [AppComponent],
 })
