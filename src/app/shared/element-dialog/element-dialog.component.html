@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Create a Customer</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label> Position </mat-label>
+    <input matInput [(ngModel)]="data.position" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> First Name</mat-label>
+    <input matInput [(ngModel)]="data.firstName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Last Name</mat-label>
+    <input matInput [(ngModel)]="data.lastName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Date of Birth</mat-label>
+    <input matInput [(ngModel)]="data.dateOfBirth" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Phone Number</mat-label>
+    <input matInput [(ngModel)]="data.phoneNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Email</mat-label>
+    <input matInput [(ngModel)]="data.email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Bank Account Number</mat-label>
+    <input matInput [(ngModel)]="data.bankAccountNumber" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Create</button>
+</div>
