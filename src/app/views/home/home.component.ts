@@ -88,4 +88,8 @@ export class HomeComponent {
       }
     });
   }
+
+  deleteCustomer(position: number): void {
+    this.dataSource = this.dataSource.filter((p) => p.position !== position);
+  }
 }

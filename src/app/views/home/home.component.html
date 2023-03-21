@@ -48,7 +48,11 @@
           <mat-icon>edit</mat-icon>
         </button>
 
-        <button mat-icon-button color="white">
+        <button
+          mat-icon-button
+          (click)="deleteCustomer(element.position)"
+          color="white"
+        >
           <mat-icon>delete</mat-icon>
         </button>
       </td>
